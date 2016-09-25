@@ -142,6 +142,9 @@ try {
 							break;
 					}
 				}
+				else {
+					src = 'http://noimageurl'
+				}
 			}
 			// Put the image into the background (see below).
 			renderImage();
