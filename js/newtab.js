@@ -124,6 +124,14 @@ try {
 				var target;
 				// Go through every piece of media
 				for (i = 0; i < media.length; i++) {
+
+					// Find if media is preferred and an image 
+					//* Potential problem if none of the media is set as the prefered media - need to ask TBA about this case *//
+					if (media[i].preferred && media[i].type === 'imgur' || media[i].type === 'cdphotothread') {
+						target = 1;
+						break;
+					}
+
 					// Find media that's an image
 					if (media[i].type === 'imgur' || media[i].type === 'cdphotothread') {
 						// Set target to that image and break loop.
